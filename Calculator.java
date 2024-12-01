@@ -81,9 +81,10 @@ public class Calculator extends JFrame implements ActionListener {
                String last = expressions.get(expressions.size() - 1);
                if (last.startsWith("-")) {
                   expressions.set(expressions.size() - 1, last.substring(1));
-               } else {
+               } 
+               else
                   expressions.set(expressions.size() - 1, "-" + last);
-               }
+               
                updateDisplay();
             }
          }
@@ -94,9 +95,9 @@ public class Calculator extends JFrame implements ActionListener {
             }
          }
          else {
-            if (lastClickWasOperator || expressions.isEmpty()) {
+            if (lastClickWasOperator || expressions.isEmpty())
                expressions.add(buttonSource);
-            } else {
+            else {
                 String last = expressions.get(expressions.size() - 1);
                 expressions.set(expressions.size() - 1, last + buttonSource);
             }
